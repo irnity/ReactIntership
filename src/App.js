@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="nav.css" />
-    <link rel="stylesheet" href="sidebar.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="fonts.css">
-    <title>Document</title>
-  </head>
-  <body>
-    <div >
+import "./Style/nav.css"
+import "./Style/style.css"
+import "./Style/main.css"
+import "./Style/sidebar.css"
+import "./Style/fonts.css"
+
+function App() {
+  return (
+    <div>
       <div class="nav">
         <div class="nav-left">
           <h2>Tasky</h2>
@@ -20,12 +14,16 @@
         </div>
         <div class="nav-right">
           <div class="seacrh">
-            <input id="search-tasks-text" type="text" placeholder="Search tasks..." >
+            <input
+              id="search-tasks-text"
+              type="text"
+              placeholder="Search tasks..."
+            />
           </div>
           <div class="more">
             <a id="text-nav-assignees">Assignees</a>
             <a id="text-nav-show">Show</a>
-            <a id="text-nav-more">More</a>
+            <a id="tsext-nav-more">More</a>
           </div>
           <div class="create">
             <button id="button-nav-share"> Share</button>
@@ -39,9 +37,9 @@
             <span id="text-sidebar-folder">Folder</span>
             <span id="text-sidebar-arrow">&#8597;</span>
           </div>
-            <div class="search-side-bar-input">
-              <input type="text" id="text-sidebar-search" placeholder="Search">
-            </div>
+          <div class="search-side-bar-input">
+            <input type="text" id="text-sidebar-search" placeholder="Search" />
+          </div>
           <div class="menu-side-bar">
             <span id="text-sidebar-menu">MENU</span>
           </div>
@@ -70,9 +68,9 @@
         <div class="center-main">
           <div class="center-main-path">
             <p id="text-main-path-projects">PROJECTS</p>
-            <p id="text-main-path-aro">></p>
+            <p id="text-main-path-aro"></p>
             <p id="text-main-path-apps">APPS</p>
-            <p id="text-main-path-arow">></p>
+            <p id="text-main-path-arow"></p>
             <p id="text-main-path-moveapp">MOVE APP</p>
           </div>
           <div class="center-main-name">
@@ -94,7 +92,9 @@
           <div class="center-main-lists">
             <div class="todo">
               <div class="todo-folder">
-                <h2 id="text-main-column" class="todos">TO DO</h2>
+                <h2 id="text-main-column" class="todos">
+                  TO DO
+                </h2>
                 <h2 id="text-main-plus">+</h2>
                 <h2 id="text-main-dots">...</h2>
               </div>
@@ -120,7 +120,9 @@
             </div>
             <div class="todo">
               <div class="todo-folder">
-                <h2 id="text-main-column" class="inwork">IN WORK</h2>
+                <h2 id="text-main-column" class="inwork">
+                  IN WORK
+                </h2>
                 <h2 id="text-main-plus">+</h2>
                 <h2 id="text-main-dots-one">...</h2>
               </div>
@@ -146,7 +148,9 @@
             </div>
             <div class="todo">
               <div class="todo-folder">
-                <h2 id="text-main-column"  class="review">REVIEW</h2>
+                <h2 id="text-main-column" class="review">
+                  REVIEW
+                </h2>
                 <h2 id="text-main-plus">+</h2>
                 <h2 id="text-main-dots">...</h2>
               </div>
@@ -172,7 +176,9 @@
             </div>
             <div class="todo">
               <div class="todo-folder">
-                <h2 id="text-main-column"  class="done">DONE</h2>
+                <h2 id="text-main-column" class="done">
+                  DONE
+                </h2>
                 <h2 id="text-main-plus">+</h2>
                 <h2 id="text-main-dots">...</h2>
               </div>
@@ -196,10 +202,11 @@
                 </div>
               </div>
             </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
-</html>
+  )
+}
+
+export default App
