@@ -10,7 +10,7 @@
 div.side-bar div {
   width: 70%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .folder-side-bar {
   flex-direction: row;
