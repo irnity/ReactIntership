@@ -3,13 +3,6 @@ import React from "react"
 class ToDo extends React.Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      name: props.name,
-      firstValue: props.firstValue,
-      secondValue: props.secondValue,
-      thirdValue: props.thirdValue,
-    }
   }
 
   render() {
@@ -17,7 +10,7 @@ class ToDo extends React.Component {
       <div className="todo">
         <div className="todo-folder">
           <h2 id="text-main-column" className="inwork">
-            {this.state.name}
+            {this.props.name}
           </h2>
           <h2 id="text-main-plus">+</h2>
           <h2 id="text-main-dots-one">...</h2>
