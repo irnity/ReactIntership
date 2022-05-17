@@ -1,5 +1,5 @@
 import React from "react"
-
+//сделать через .map
 class ToDo extends React.Component {
   render() {
     return (

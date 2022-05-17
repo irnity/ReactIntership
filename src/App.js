@@ -10,8 +10,6 @@ import SideBar from "./Components/SideBar"
 import Path from "./Components/Path"
 import Name from "./Components/Name"
 import Panel from "./Components/Panel"
-// import ProductTable from "./Components/ProducTable"
-import Apps from "./Components/Filter"
 import Filter from "./Components/Filter"
 
 function App() {

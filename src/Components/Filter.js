@@ -61,6 +61,23 @@ const Filter = () => {
     </div>
   ))
 
+  const handleSort = (type) => {
+    const draftList = [...userList]
+
+    switch (type) {
+      case "Switch2":
+        draftList.sort((a, b) => a.name.localeCompare(b.name))
+        break
+      case "Switch3":
+        draftList.sort((a, b) => a.age - b.age)
+        break
+      default:
+      //do nothing
+    }
+
+    setUserList(draftList)
+  }
+
   return (
     <div className="bg">
       <div className="input card ">
@@ -93,7 +110,15 @@ const Filter = () => {
       </div>
       <div className="table">
         <div className="cardt">
-          <div className="users ">{filterlist}</div>
+          <div className="users ">
+            <button className="button" onClick={() => handleSort("Switch2")}>
+              BY NAME
+            </button>
+            <button className="button" onClick={() => handleSort("Switch3")}>
+              BY AGE
+            </button>
+            {filterlist}
+          </div>
         </div>
       </div>
     </div>
