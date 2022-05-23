@@ -3,9 +3,27 @@ import { useState } from "react"
 
 const Filter = () => {
   const data = [
-    { id: 1, name: "Igor", surname: "Ivanov", age: "27" },
-    { id: 2, name: "Gregory", surname: "Shabelnik", age: "44" },
-    { id: 3, name: "Danil", surname: "Ishytin", age: "19" },
+    {
+      id: 1,
+      name: {
+        firstName: "Igor",
+        secondName: "Ivanov",
+      },
+      age: "27",
+    },
+    {
+      id: 2,
+      name: {
+        firstName: "Gregory",
+        secondName: "Shabelnik",
+      },
+      age: "44",
+    },
+    {
+      id: 3,
+      name: { firstName: "Bohdan", secondName: "Grigorovich" },
+      age: "19",
+    },
   ]
   const [userList, setUserList] = useState(data)
 
@@ -32,8 +50,10 @@ const Filter = () => {
       return [
         ...prevUsersList,
         {
-          name: uName,
-          surname: uSurname,
+          name: {
+            firstName: uName,
+            secondName: uSurname,
+          },
           age: uAge,
           id: Math.random().toString(),
         },
@@ -53,7 +73,7 @@ const Filter = () => {
   const filterlist = userList.map((user) => (
     <div>
       <li className="color" key={user.id}>
-        {user.name} {user.surname}, {user.age} year old,
+        {user.name.firstName} {user.name.secondName}, {user.age} year old,
       </li>
       <button className="button" onClick={() => handleRemoveItem(user.id)}>
         delete
@@ -65,10 +85,10 @@ const Filter = () => {
     const draftList = [...userList]
 
     switch (type) {
-      case "Switch2":
+      case "Switch1":
         draftList.sort((a, b) => a.name.localeCompare(b.name))
         break
-      case "Switch3":
+      case "Switch2":
         draftList.sort((a, b) => a.age - b.age)
         break
       default:
@@ -111,10 +131,10 @@ const Filter = () => {
       <div className="table">
         <div className="cardt">
           <div className="users ">
-            <button className="button" onClick={() => handleSort("Switch2")}>
+            <button className="button" onClick={() => handleSort("Switch1")}>
               BY NAME
             </button>
-            <button className="button" onClick={() => handleSort("Switch3")}>
+            <button className="button" onClick={() => handleSort("Switch2")}>
               BY AGE
             </button>
             {filterlist}
