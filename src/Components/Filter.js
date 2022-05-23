@@ -10,7 +10,7 @@ const Filter = () => {
   const [userList, setUserList] = useState(data)
 
   const handleRemoveItem = (id) => {
-    setUserList(userList.filter((info) => info.id !== id))
+    setUserList((prevUserList) => prevUserList.filter((info) => info.id !== id))
   }
 
   const [enteredName, setEnteredName] = useState("")
