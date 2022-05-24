@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "firstName": "Andrii",
+      "secondName": "Gregorovich"
+    },
+    "address": "3 waterfoot road",
+    "phoneNumber": "3339627516",
+    "email": "jenny.chan@email.com"
+  },
+  {
+    "id": 2,
+    "name": {
+      "firstName": "Clark",
+      "secondName": "Kent"
+    },
+    "address": "4 tall town",
+    "phoneNumber": "0112117516",
+    "email": "jessica.warren@email.com"
+  },
+  {
+    "id": 3,
+    "name": {
+      "firstName": "Bohdan",
+      "secondName": "Mask"
+    },
+    "address": "11 lesly road",
+    "phoneNumber": "7889627516",
+    "email": "tony.frank@email.com"
+  },
+  {
+    "id": 4,
+    "name": {
+      "firstName": "Sara",
+      "secondName": "Wolle"
+    },
+    "address": "333 miltown manor",
+    "phoneNumber": "01196211",
+    "email": "jeremy.clark@email.com"
+  },
+  {
+    "id": 5,
+    "name": {
+      "firstName": "Igor",
+      "secondName": "Kyzmovich"
+    },
+    "address": "99 blue acres",
+    "phoneNumber": "32319627516",
+    "email": "raymon.edwards@email.com"
+  }
+]

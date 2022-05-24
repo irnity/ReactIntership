@@ -10,7 +10,7 @@ import SideBar from "./Components/SideBar"
 import Path from "./Components/Path"
 import Name from "./Components/Name"
 import Panel from "./Components/Panel"
-import Filter from "./Components/Filter"
+import Filters from "./Components/bio/Filters"
 
 function App() {
   return (
@@ -50,7 +50,7 @@ function App() {
           </div>
         </div>
       </div>
-      <Filter />
+      <Filters />
     </div>
   )
 }
