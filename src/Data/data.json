@@ -5,9 +5,9 @@
       "firstName": "Andrii",
       "secondName": "Gregorovich"
     },
-    "address": "3 waterfoot road",
+    "address": "3 waterfoot",
     "phoneNumber": "3339627516",
-    "email": "jenny.chan@email.com"
+    "email": "Gregorovich@email.com"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     },
     "address": "4 tall town",
     "phoneNumber": "0112117516",
-    "email": "jessica.warren@email.com"
+    "email": "Kent@email.com"
   },
   {
     "id": 3,
@@ -25,9 +25,9 @@
       "firstName": "Bohdan",
       "secondName": "Mask"
     },
-    "address": "11 lesly road",
+    "address": "11 road",
     "phoneNumber": "7889627516",
-    "email": "tony.frank@email.com"
+    "email": "Mask@email.com"
   },
   {
     "id": 4,
@@ -35,9 +35,9 @@
       "firstName": "Sara",
       "secondName": "Wolle"
     },
-    "address": "333 miltown manor",
+    "address": "333 miltown",
     "phoneNumber": "01196211",
-    "email": "jeremy.clark@email.com"
+    "email": "Wolle@email.com"
   },
   {
     "id": 5,
@@ -47,6 +47,6 @@
     },
     "address": "99 blue acres",
     "phoneNumber": "32319627516",
-    "email": "raymon.edwards@email.com"
+    "email": "Kyzmovich@email.com"
   }
 ]
