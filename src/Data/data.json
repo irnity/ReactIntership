@@ -1,50 +1,40 @@
 [
   {
     "id": 1,
-    "name": {
-      "firstName": "Andrii",
-      "secondName": "Gregorovich"
-    },
+    "firstName": "Andrii",
+    "secondName": "Gregorovich",
     "address": "3 waterfoot",
     "phoneNumber": "3339627516",
     "email": "Gregorovich@email.com"
   },
   {
     "id": 2,
-    "name": {
-      "firstName": "Clark",
-      "secondName": "Kent"
-    },
+    "firstName": "Clark",
+    "secondName": "Kent",
     "address": "4 tall town",
     "phoneNumber": "0112117516",
     "email": "Kent@email.com"
   },
   {
     "id": 3,
-    "name": {
-      "firstName": "Bohdan",
-      "secondName": "Mask"
-    },
+    "firstName": "Bohdan",
+    "secondName": "Mask",
     "address": "11 road",
     "phoneNumber": "7889627516",
     "email": "Mask@email.com"
   },
   {
     "id": 4,
-    "name": {
-      "firstName": "Sara",
-      "secondName": "Wolle"
-    },
+    "firstName": "Sara",
+    "secondName": "Wolle",
     "address": "333 miltown",
     "phoneNumber": "01196211",
     "email": "Wolle@email.com"
   },
   {
     "id": 5,
-    "name": {
-      "firstName": "Igor",
-      "secondName": "Kyzmovich"
-    },
+    "firstName": "Igor",
+    "secondName": "Kyzmovich",
     "address": "99 blue acres",
     "phoneNumber": "32319627516",
     "email": "Kyzmovich@email.com"

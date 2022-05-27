@@ -13,7 +13,7 @@ const EditableRow = ({
           required="required"
           placeholder="Enter a Fname..."
           name="firstName"
-          value={editFormData.name.firstName}
+          value={editFormData.firstName}
           onChange={handleEditFormChange}
         ></input>
       </td>
@@ -23,7 +23,7 @@ const EditableRow = ({
           required="required"
           placeholder="Enter a Sname..."
           name="secondName"
-          value={editFormData.name.secondName}
+          value={editFormData.secondName}
           onChange={handleEditFormChange}
         ></input>
       </td>

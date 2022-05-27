@@ -8,20 +8,16 @@ import ReadOnlyRow from "./ReadOnlyRow"
 const Filters = () => {
   const [contacts, setContacts] = useState(data)
   const [addFormData, setAddFormData] = useState({
-    name: {
-      firstName: "",
-      secondName: "",
-    },
+    firstName: "",
+    secondName: "",
     address: "",
     phoneNumber: "",
     email: "",
   })
 
   const [editFormData, setEditFormData] = useState({
-    name: {
-      firstName: "",
-      secondName: "",
-    },
+    firstName: "",
+    secondName: "",
     address: "",
     phoneNumber: "",
     email: "",
@@ -35,8 +31,7 @@ const Filters = () => {
     const fieldName = event.target.getAttribute("name")
     const fieldValue = event.target.value
 
-    const newFormData = { ...addFormData }
-    newFormData[fieldName] = fieldValue
+    const newFormData = { ...addFormData, [fieldName]: fieldValue }
 
     setAddFormData(newFormData)
   }
@@ -47,8 +42,7 @@ const Filters = () => {
     const fieldName = event.target.getAttribute("name")
     const fieldValue = event.target.value
 
-    const newFormData = { ...editFormData }
-    newFormData[fieldName] = fieldValue
+    const newFormData = { ...editFormData, [fieldName]: fieldValue }
 
     setEditFormData(newFormData)
   }
@@ -58,11 +52,8 @@ const Filters = () => {
 
     const newContact = {
       id: nanoid(),
-      fullName: addFormData.fullName,
-      name: {
-        firstName: addFormData.firstName,
-        secondName: addFormData.secondName,
-      },
+      firstName: addFormData.firstName,
+      secondName: addFormData.secondName,
       address: addFormData.address,
       phoneNumber: addFormData.phoneNumber,
       email: addFormData.email,
@@ -77,10 +68,8 @@ const Filters = () => {
 
     const editedContact = {
       id: editContactId,
-      name: {
-        firstName: editFormData.firstName,
-        secondName: editFormData.secondName,
-      },
+      firstName: editFormData.firstName,
+      secondName: editFormData.secondName,
       address: editFormData.address,
       phoneNumber: editFormData.phoneNumber,
       email: editFormData.email,
@@ -101,14 +90,13 @@ const Filters = () => {
     setEditContactId(contact.id)
 
     const formValues = {
-      name: {
-        firstName: contact.name.firstName,
-        secondName: contact.name.secondName,
-      },
+      firstName: contact.firstName,
+      secondName: contact.secondName,
       address: contact.address,
       phoneNumber: contact.phoneNumber,
       email: contact.email,
     }
+    console.log(formValues)
 
     setEditFormData(formValues)
   }
@@ -132,14 +120,10 @@ const Filters = () => {
 
     switch (type) {
       case "Switch1":
-        draftList.sort((a, b) =>
-          a.name.firstName.localeCompare(b.name.firstName)
-        )
+        draftList.sort((a, b) => a.firstName.localeCompare(b.firstName))
         break
       case "Switch2":
-        draftList.sort((a, b) =>
-          a.name.secondName.localeCompare(b.name.secondName)
-        )
+        draftList.sort((a, b) => a.secondName.localeCompare(b.secondName))
         break
       default:
       //do nothing

@@ -11,6 +11,7 @@ import Path from "./Components/Path"
 import Name from "./Components/Name"
 import Panel from "./Components/Panel"
 import Filters from "./Components/bio/Filters"
+// import Ccomponent from "./test/Ccomponent"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Navigation />
       <div className="main-app">
         <SideBar />
+        {/* <Ccomponent /> */}
         <div className="center-main">
           <Path />
           <Name />
