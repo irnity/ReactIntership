@@ -4,25 +4,25 @@ import "./Style/main.css"
 import "./Style/sidebar.css"
 import "./Style/fonts.css"
 
-import ToDo from "./Components/ToDo"
-import Navigation from "./Components/Navigation"
-import SideBar from "./Components/SideBar"
-import Path from "./Components/Path"
-import Name from "./Components/Name"
-import Panel from "./Components/Panel"
+import ToDo from "./Components/todo/ToDo"
+import Navigation from "./Components/navbar/Navigation"
+import SideBar from "./Components/sidebar/SideBar"
+import Path from "./Components/path/Path"
+import Name from "./Components/name/Name"
+import Panel from "./Components/panel/Panel"
 import Filters from "./Components/bio/Filters"
 // import Ccomponent from "./test/Ccomponent"
 
 function App() {
   return (
     <div>
-      <Navigation />
+      <Navigation share={"Share"} create={"+ Create New"} />
       <div className="main-app">
         <SideBar />
         {/* <Ccomponent /> */}
         <div className="center-main">
-          <Path />
-          <Name />
+          <Path folder={"PROJECTS"} projectName={"CRYPTER APP"} />
+          <Name name={"Crypter App"} />
           <Panel />
           <div className="center-main-lists">
             <ToDo
