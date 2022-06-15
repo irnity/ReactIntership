@@ -6,6 +6,7 @@ div {
 }
 .main-app {
   display: flex;
+  height: auto;
 }
 .color {
   color: black;

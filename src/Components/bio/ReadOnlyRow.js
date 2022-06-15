@@ -1,5 +1,4 @@
 import React from "react"
-
 const ReadOnlyRow = ({ contact, handleEditClick, handleDeleteClick }) => {
   return (
     <tr>

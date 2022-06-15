@@ -33,12 +33,12 @@
 }
 .center-main-lists {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 .todo {
-  width: 100%;
-  height: 30em;
-  border-right: 1px solid rgba(99, 98, 98, 0.2);
+  width: 33%;
+  border: 1px solid rgba(99, 98, 98, 0.2);
 }
 .todo-folder {
   display: flex;
@@ -47,6 +47,7 @@
 .todo-blocks {
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
 }
 .center-main-block {
   display: flex;

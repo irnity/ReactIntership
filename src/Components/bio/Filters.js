@@ -96,7 +96,6 @@ const Filters = () => {
       phoneNumber: contact.phoneNumber,
       email: contact.email,
     }
-    console.log(formValues)
 
     setEditFormData(formValues)
   }
@@ -130,6 +129,7 @@ const Filters = () => {
     }
     setContacts(draftList)
   }
+
   return (
     <div className="app-container">
       <form onSubmit={handleEditFormSubmit}>
