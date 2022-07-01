@@ -11,6 +11,7 @@ import Time from "./Components/time/Time"
 import Name from "./Components/name/Name"
 import Panel from "./Components/panel/Panel"
 import Filters from "./Components/bio/Filters"
+import Hero from "./Components/hero/Hero"
 // import Ccomponent from "./test/trying/Ccomponent"
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         </div>
       </div>
       <Filters />
+      <Hero />
       {/* <Ccomponent /> */}
     </div>
   )

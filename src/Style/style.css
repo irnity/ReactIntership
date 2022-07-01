@@ -2,7 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 div {
-  color: white;
+  color: rgb(5, 5, 5);
 }
 .main-app {
   display: flex;

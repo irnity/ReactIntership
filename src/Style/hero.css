@@ -1,0 +1,18 @@
+.hero-body {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.hero-main {
+  width: 30%;
+  border: 1px solid rgb(224, 49, 49);
+  margin: 5px;
+}
+.hero-name {
+  margin: 5px;
+}
