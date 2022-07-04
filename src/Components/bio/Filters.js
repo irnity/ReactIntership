@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 import '../../Style/filters.css';
 import data from '../../Data/data.json';
 import EditableRow from './EditableRow';
@@ -33,7 +33,6 @@ function Filters() {
     const fieldValue = event.target.value;
 
     const newFormData = { ...addFormData, [fieldName]: fieldValue };
-
     setAddFormData(newFormData);
   };
 
@@ -52,16 +51,23 @@ function Filters() {
     event.preventDefault();
 
     const newContact = {
-      id: nanoid(),
+      id: contacts.slice(-1)[0].id + 1,
       firstName: addFormData.firstName,
       secondName: addFormData.secondName,
       address: addFormData.address,
       phoneNumber: addFormData.phoneNumber,
       email: addFormData.email,
     };
-
     const newContacts = [...contacts, newContact];
+    
     setContacts(newContacts);
+    setAddFormData({
+      firstName: '',
+      secondName: '',
+      address: '',
+      phoneNumber: '',
+      email: '',
+    });
   };
 
   const handleEditFormSubmit = (event) => {
@@ -211,7 +217,8 @@ function Filters() {
           type="text"
           name="firstName"
           required="required"
-          placeholder="Enter a Fname..."
+          placeholder="Enter a name..."
+          value={addFormData.firstName}
           onChange={handleAddFormChange}
         />
         <input
@@ -219,6 +226,7 @@ function Filters() {
           name="secondName"
           required="required"
           placeholder="Enter an Sname..."
+          value={addFormData.secondName}
           onChange={handleAddFormChange}
         />
         <input
@@ -226,6 +234,7 @@ function Filters() {
           name="address"
           required="required"
           placeholder="Enter an addres..."
+          value={addFormData.address}
           onChange={handleAddFormChange}
         />
         <input
@@ -233,6 +242,7 @@ function Filters() {
           name="phoneNumber"
           required="required"
           placeholder="Enter a phone number..."
+          value={addFormData.phoneNumber}
           onChange={handleAddFormChange}
         />
         <input
@@ -240,6 +250,7 @@ function Filters() {
           name="email"
           required="required"
           placeholder="Enter an email..."
+          value={addFormData.email}
           onChange={handleAddFormChange}
         />
         <button type="submit">Add</button>
