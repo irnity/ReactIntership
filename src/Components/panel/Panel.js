@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from 'react';
 
 class Panel extends Component {
   render() {
@@ -15,8 +15,8 @@ class Panel extends Component {
           <span id="text-main-path-code">&#x268F;</span>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Panel
+export default Panel;

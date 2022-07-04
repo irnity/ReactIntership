@@ -1,9 +1,10 @@
-import React, { Component } from "react"
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class ToDoView extends Component {
   render() {
-    const { name } = this.props
-    const { firstValue, secondValue, thirdValue } = this.props
+    const { name } = this.props;
+    const { firstValue, secondValue, thirdValue } = this.props;
     return (
       <div className="todo">
         <div className="todo-folder">
@@ -33,8 +34,15 @@ class ToDoView extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default ToDoView
+ToDoView.propTypes = {
+  name: PropTypes.string.isRequired,
+  firstValue: PropTypes.string.isRequired,
+  secondValue: PropTypes.string.isRequired,
+  thirdValue: PropTypes.string.isRequired,
+};
+
+export default ToDoView;

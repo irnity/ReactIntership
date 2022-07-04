@@ -1,8 +1,9 @@
-import React, { Component } from "react"
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Navigation extends Component {
   render() {
-    const { share, create } = this.props
+    const { share, create } = this.props;
     return (
       <div className="nav">
         <div className="nav-left">
@@ -29,13 +30,20 @@ class Navigation extends Component {
             </a>
           </div>
           <div className="create">
-            <button id="button-nav-share"> {share}</button>
-            <button id="button-nav-create">{create}</button>
+            <button type="button" id="button-nav-share">
+              {share}
+            </button>
+            <button type="button" id="button-nav-create">{create}</button>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Navigation
+Navigation.propTypes = {
+  share: PropTypes.string.isRequired,
+  create: PropTypes.string.isRequired,
+};
+
+export default Navigation;

@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from 'react';
 
 class SideBar extends Component {
   render() {
@@ -36,8 +36,8 @@ class SideBar extends Component {
           <span id="text-sidebar-arrow-low">&#8595;</span>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default SideBar
+export default SideBar;

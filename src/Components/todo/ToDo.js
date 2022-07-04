@@ -1,10 +1,11 @@
-import React from "react"
-import ToDoView from "./ToDoView"
-//сделать через .map
+import React from 'react';
+import PropTypes from 'prop-types';
+import ToDoView from './ToDoView';
+
 class ToDo extends React.Component {
   render() {
-    const { name } = this.props
-    const { firstValue, secondValue, thirdValue } = this.props
+    const { name } = this.props;
+    const { firstValue, secondValue, thirdValue } = this.props;
     return (
       <ToDoView
         name={name}
@@ -12,8 +13,15 @@ class ToDo extends React.Component {
         secondValue={secondValue}
         thirdValue={thirdValue}
       />
-    )
+    );
   }
 }
 
-export default ToDo
+ToDo.propTypes = {
+  name: PropTypes.string.isRequired,
+  firstValue: PropTypes.string.isRequired,
+  secondValue: PropTypes.string.isRequired,
+  thirdValue: PropTypes.string.isRequired,
+};
+
+export default ToDo;

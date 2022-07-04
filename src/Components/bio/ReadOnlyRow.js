@@ -1,5 +1,7 @@
-import React from "react"
-const ReadOnlyRow = ({
+import React from 'react';
+import PropTypes from 'prop-types';
+
+function ReadOnlyRow({
   contact,
   handleEditClick,
   handleDeleteClick,
@@ -7,10 +9,9 @@ const ReadOnlyRow = ({
   dragEndHandler,
   dragOverHandler,
   dropHandler,
-}) => {
-  const onkeydown = (e) => {
-    console.log("hello")
-  }
+}) {
+  const onkeydown = () => {
+  };
   return (
     <tr
       onDragStart={(e) => dragStartHandler(e, contact)}
@@ -19,7 +20,7 @@ const ReadOnlyRow = ({
       onDragOver={(e) => dragOverHandler(e)}
       onDrop={(e) => dropHandler(e, contact)}
       onKeyDownCapture={onkeydown}
-      draggable={true}
+      draggable
     >
       <td>{contact.firstName}</td>
       <td>{contact.secondName}</td>
@@ -38,7 +39,17 @@ const ReadOnlyRow = ({
         </button>
       </td>
     </tr>
-  )
+  );
 }
 
-export default ReadOnlyRow
+ReadOnlyRow.propTypes = {
+  contact: PropTypes.string.isRequired,
+  handleEditClick: PropTypes.func.isRequired,
+  handleDeleteClick: PropTypes.func.isRequired,
+  dragStartHandler: PropTypes.func.isRequired,
+  dragEndHandler: PropTypes.func.isRequired,
+  dragOverHandler: PropTypes.func.isRequired,
+  dropHandler: PropTypes.func.isRequired,
+};
+
+export default ReadOnlyRow;

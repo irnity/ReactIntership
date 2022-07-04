@@ -1,55 +1,55 @@
-import React, { useState, Fragment } from "react"
-import { nanoid } from "nanoid"
-import "../../Style/filters.css"
-import data from "../../Data/data.json"
-import EditableRow from "./EditableRow"
-import ReadOnlyRow from "./ReadOnlyRow"
+import React, { Fragment, useState } from 'react';
+import { nanoid } from 'nanoid';
+import '../../Style/filters.css';
+import data from '../../Data/data.json';
+import EditableRow from './EditableRow';
+import ReadOnlyRow from './ReadOnlyRow';
 
-const Filters = () => {
-  const [contacts, setContacts] = useState(data)
+function Filters() {
+  const [contacts, setContacts] = useState(data);
   const [addFormData, setAddFormData] = useState({
-    firstName: "",
-    secondName: "",
-    address: "",
-    phoneNumber: "",
-    email: "",
-  })
-  const [currentContact, setCurrentContact] = useState(null)
+    firstName: '',
+    secondName: '',
+    address: '',
+    phoneNumber: '',
+    email: '',
+  });
+  const [currentContact, setCurrentContact] = useState(null);
 
   const [editFormData, setEditFormData] = useState({
-    firstName: "",
-    secondName: "",
-    address: "",
-    phoneNumber: "",
-    email: "",
-  })
+    firstName: '',
+    secondName: '',
+    address: '',
+    phoneNumber: '',
+    email: '',
+  });
 
-  const [editContactId, setEditContactId] = useState(null)
+  const [editContactId, setEditContactId] = useState(null);
 
   const handleAddFormChange = (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    const fieldName = event.target.getAttribute("name")
-    const fieldValue = event.target.value
+    const fieldName = event.target.getAttribute('name');
+    const fieldValue = event.target.value;
 
-    const newFormData = { ...addFormData, [fieldName]: fieldValue }
+    const newFormData = { ...addFormData, [fieldName]: fieldValue };
 
-    setAddFormData(newFormData)
-  }
+    setAddFormData(newFormData);
+  };
 
   const handleEditFormChange = (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    const fieldName = event.target.getAttribute("name")
-    const fieldValue = event.target.value
+    const fieldName = event.target.getAttribute('name');
+    const fieldValue = event.target.value;
 
-    const newFormData = { ...editFormData, [fieldName]: fieldValue }
+    const newFormData = { ...editFormData, [fieldName]: fieldValue };
 
-    setEditFormData(newFormData)
-  }
+    setEditFormData(newFormData);
+  };
 
   const handleAddFormSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
     const newContact = {
       id: nanoid(),
@@ -58,14 +58,14 @@ const Filters = () => {
       address: addFormData.address,
       phoneNumber: addFormData.phoneNumber,
       email: addFormData.email,
-    }
+    };
 
-    const newContacts = [...contacts, newContact]
-    setContacts(newContacts)
-  }
+    const newContacts = [...contacts, newContact];
+    setContacts(newContacts);
+  };
 
   const handleEditFormSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
     const editedContact = {
       id: editContactId,
@@ -74,21 +74,21 @@ const Filters = () => {
       address: editFormData.address,
       phoneNumber: editFormData.phoneNumber,
       email: editFormData.email,
-    }
+    };
 
-    const newContacts = [...contacts]
+    const newContacts = [...contacts];
 
-    const index = contacts.findIndex((contact) => contact.id === editContactId)
+    const index = contacts.findIndex((contact) => contact.id === editContactId);
 
-    newContacts[index] = editedContact
+    newContacts[index] = editedContact;
 
-    setContacts(newContacts)
-    setEditContactId(null)
-  }
+    setContacts(newContacts);
+    setEditContactId(null);
+  };
 
   const handleEditClick = (event, contact) => {
-    event.preventDefault()
-    setEditContactId(contact.id)
+    event.preventDefault();
+    setEditContactId(contact.id);
 
     const formValues = {
       firstName: contact.firstName,
@@ -96,74 +96,73 @@ const Filters = () => {
       address: contact.address,
       phoneNumber: contact.phoneNumber,
       email: contact.email,
-    }
+    };
 
-    setEditFormData(formValues)
-  }
+    setEditFormData(formValues);
+  };
 
   const handleCancelClick = () => {
-    setEditContactId(null)
-  }
+    setEditContactId(null);
+  };
 
   const handleDeleteClick = (contactId) => {
-    const newContacts = [...contacts]
+    const newContacts = [...contacts];
 
-    const index = contacts.findIndex((contact) => contact.id === contactId)
+    const index = contacts.findIndex((contact) => contact.id === contactId);
 
-    newContacts.splice(index, 1)
+    newContacts.splice(index, 1);
 
-    setContacts(newContacts)
-  }
+    setContacts(newContacts);
+  };
 
   const handleSort = (type) => {
-    const draftList = [...contacts]
+    const draftList = [...contacts];
 
     switch (type) {
-      case "Switch1":
-        draftList.sort((a, b) => a.firstName.localeCompare(b.firstName))
-        break
-      case "Switch2":
-        draftList.sort((a, b) => a.secondName.localeCompare(b.secondName))
-        break
+      case 'Switch1':
+        draftList.sort((a, b) => a.firstName.localeCompare(b.firstName));
+        break;
+      case 'Switch2':
+        draftList.sort((a, b) => a.secondName.localeCompare(b.secondName));
+        break;
       default:
-      //do nothing
+      // do nothing
     }
-    setContacts(draftList)
-  }
+    setContacts(draftList);
+  };
 
   const dragStartHandler = (e, contact) => {
     // console.log("drag", contact)
-    setCurrentContact(contact)
-  }
+    setCurrentContact(contact);
+  };
   const dragEndHandler = (e) => {
-    e.target.style.background = " rgb(20, 20, 20)"
-  }
+    e.target.style.background = ' rgb(20, 20, 20)';
+  };
   const dragOverHandler = (e) => {
-    e.preventDefault()
-    e.target.style.background = "lightgray"
-  }
+    e.preventDefault();
+    e.target.style.background = 'lightgray';
+  };
   const dropHandler = (e, contact) => {
-    e.preventDefault()
-    // console.log("drop", contact)
+    e.preventDefault();
     setContacts(
-      contacts.map((data) => {
-        if (data.id === contact.id) {
-          return { ...data, id: currentContact.id }
+      contacts.map((datas) => {
+        if (datas.id === contact.id) {
+          return { ...datas, id: currentContact.id };
         }
-        if (data.id === currentContact.id) {
-          return { ...data, id: contact.id }
+        if (datas.id === currentContact.id) {
+          return { ...datas, id: contact.id };
         }
-        return data
+        return datas;
       })
-    )
-    e.target.style.background = "rgb(20, 20, 20)"
-  }
+    );
+    e.target.style.background = 'rgb(20, 20, 20)';
+  };
 
   const sortContacts = (a, b) => {
     if (a.id > b.id) {
-      return 1
-    } else return -1
-  }
+      return 1;
+    } return -1;
+  };
 
   return (
     <div className="app-container">
@@ -171,8 +170,8 @@ const Filters = () => {
         <table>
           <thead>
             <tr>
-              <th onClick={() => handleSort("Switch1")}>FirstName</th>
-              <th onClick={() => handleSort("Switch2")}>SecondName</th>
+              <th onClick={() => handleSort('Switch1')}>FirstName</th>
+              <th onClick={() => handleSort('Switch2')}>SecondName</th>
               <th>Address</th>
               <th>Phone Number</th>
               <th>Email</th>
@@ -181,7 +180,7 @@ const Filters = () => {
           </thead>
           <tbody>
             {contacts.sort(sortContacts).map((contact) => (
-              <Fragment>
+              <>
                 {editContactId === contact.id ? (
                   <EditableRow
                     editFormData={editFormData}
@@ -199,7 +198,8 @@ const Filters = () => {
                     handleDeleteClick={handleDeleteClick}
                   />
                 )}
-              </Fragment>
+                <div />
+              </>
             ))}
           </tbody>
         </table>
@@ -245,7 +245,7 @@ const Filters = () => {
         <button type="submit">Add</button>
       </form>
     </div>
-  )
+  );
 }
 
-export default Filters
+export default Filters;

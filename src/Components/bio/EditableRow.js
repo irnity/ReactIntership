@@ -1,10 +1,11 @@
-import React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const EditableRow = ({
+function EditableRow({
   editFormData,
   handleEditFormChange,
   handleCancelClick,
-}) => {
+}) {
   return (
     <tr>
       <td>
@@ -15,7 +16,7 @@ const EditableRow = ({
           name="firstName"
           value={editFormData.firstName}
           onChange={handleEditFormChange}
-        ></input>
+        />
       </td>
       <td>
         <input
@@ -25,7 +26,7 @@ const EditableRow = ({
           name="secondName"
           value={editFormData.secondName}
           onChange={handleEditFormChange}
-        ></input>
+        />
       </td>
       <td>
         <input
@@ -35,7 +36,7 @@ const EditableRow = ({
           name="address"
           value={editFormData.address}
           onChange={handleEditFormChange}
-        ></input>
+        />
       </td>
       <td>
         <input
@@ -45,7 +46,7 @@ const EditableRow = ({
           name="phoneNumber"
           value={editFormData.phoneNumber}
           onChange={handleEditFormChange}
-        ></input>
+        />
       </td>
       <td>
         <input
@@ -55,7 +56,7 @@ const EditableRow = ({
           name="email"
           value={editFormData.email}
           onChange={handleEditFormChange}
-        ></input>
+        />
       </td>
       <td>
         <button type="submit">Save</button>
@@ -64,7 +65,13 @@ const EditableRow = ({
         </button>
       </td>
     </tr>
-  )
+  );
 }
 
-export default EditableRow
+EditableRow.propTypes = {
+  editFormData: PropTypes.string.isRequired,
+  handleEditFormChange: PropTypes.func.isRequired,
+  handleCancelClick: PropTypes.func.isRequired,
+};
+
+export default EditableRow;
