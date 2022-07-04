@@ -46,7 +46,7 @@ class Hero extends Component {
     return (
       <div className="hero-top">
         <div className="hero-body">
-          <h1>Star Wars</h1>
+          <h1 className="color">Star Wars</h1>
           <div className="hero">
             {people.map((person) => (
               <div key={people.name} className="hero-main">
