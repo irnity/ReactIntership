@@ -14,6 +14,7 @@ const Filters = () => {
     phoneNumber: "",
     email: "",
   })
+  const [currentContact, setCurrentContact] = useState(null)
 
   const [editFormData, setEditFormData] = useState({
     firstName: "",
@@ -130,6 +131,40 @@ const Filters = () => {
     setContacts(draftList)
   }
 
+  const dragStartHandler = (e, contact) => {
+    // console.log("drag", contact)
+    setCurrentContact(contact)
+  }
+  const dragEndHandler = (e) => {
+    e.target.style.background = " rgb(20, 20, 20)"
+  }
+  const dragOverHandler = (e) => {
+    e.preventDefault()
+    e.target.style.background = "lightgray"
+  }
+  const dropHandler = (e, contact) => {
+    e.preventDefault()
+    // console.log("drop", contact)
+    setContacts(
+      contacts.map((data) => {
+        if (data.id === contact.id) {
+          return { ...data, id: currentContact.id }
+        }
+        if (data.id === currentContact.id) {
+          return { ...data, id: contact.id }
+        }
+        return data
+      })
+    )
+    e.target.style.background = "rgb(20, 20, 20)"
+  }
+
+  const sortContacts = (a, b) => {
+    if (a.id > b.id) {
+      return 1
+    } else return -1
+  }
+
   return (
     <div className="app-container">
       <form onSubmit={handleEditFormSubmit}>
@@ -145,7 +180,7 @@ const Filters = () => {
             </tr>
           </thead>
           <tbody>
-            {contacts.map((contact) => (
+            {contacts.sort(sortContacts).map((contact) => (
               <Fragment>
                 {editContactId === contact.id ? (
                   <EditableRow
@@ -155,6 +190,10 @@ const Filters = () => {
                   />
                 ) : (
                   <ReadOnlyRow
+                    dragStartHandler={dragStartHandler}
+                    dragEndHandler={dragEndHandler}
+                    dragOverHandler={dragOverHandler}
+                    dropHandler={dropHandler}
                     contact={contact}
                     handleEditClick={handleEditClick}
                     handleDeleteClick={handleDeleteClick}
@@ -166,7 +205,7 @@ const Filters = () => {
         </table>
       </form>
 
-      <h2>Add a Contact</h2>
+      <h2 className="color">Add a Contact</h2>
       <form onSubmit={handleAddFormSubmit}>
         <input
           type="text"

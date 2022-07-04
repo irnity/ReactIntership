@@ -38,16 +38,18 @@ class Hero extends Component {
       return <p> Loading...</p>
     } else {
       return (
-        <div className="hero-body">
-          <h1>Star Wars</h1>
-          <div className="hero">
-            {people.map((people) => (
-              <div key={people.name} className="hero-main">
-                <div className="hero-name">Name:{people.name}</div>
-                <div className="hero-name">Height:{people.height}</div>
-                <div className="hero-name">Mass:{people.mass}</div>
-              </div>
-            ))}
+        <div className="hero-top">
+          <div className="hero-body">
+            <h1>Star Wars</h1>
+            <div className="hero">
+              {people.map((people) => (
+                <div key={people.name} className="hero-main">
+                  <div className="hero-name">Name:{people.name}</div>
+                  <div className="hero-name">Height:{people.height}</div>
+                  <div className="hero-name">Mass:{people.mass}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )

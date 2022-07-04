@@ -1,7 +1,26 @@
 import React from "react"
-const ReadOnlyRow = ({ contact, handleEditClick, handleDeleteClick }) => {
+const ReadOnlyRow = ({
+  contact,
+  handleEditClick,
+  handleDeleteClick,
+  dragStartHandler,
+  dragEndHandler,
+  dragOverHandler,
+  dropHandler,
+}) => {
+  const onkeydown = (e) => {
+    console.log("hello")
+  }
   return (
-    <tr>
+    <tr
+      onDragStart={(e) => dragStartHandler(e, contact)}
+      onDragLeave={(e) => dragEndHandler(e)}
+      onDragEnd={(e) => dragEndHandler(e)}
+      onDragOver={(e) => dragOverHandler(e)}
+      onDrop={(e) => dropHandler(e, contact)}
+      onKeyDownCapture={onkeydown}
+      draggable={true}
+    >
       <td>{contact.firstName}</td>
       <td>{contact.secondName}</td>
       <td>{contact.address}</td>

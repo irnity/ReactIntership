@@ -38,5 +38,37 @@
     "address": "99 blue acres",
     "phoneNumber": "32319627516",
     "email": "Kyzmovich@email.com"
+  },
+  {
+    "id": 6,
+    "firstName": "Sara",
+    "secondName": "Wolle",
+    "address": "333 miltown",
+    "phoneNumber": "01196211",
+    "email": "Wolle@email.com"
+  },
+  {
+    "id": 7,
+    "firstName": "Rachel",
+    "secondName": "Tramp",
+    "address": "55 Lake",
+    "phoneNumber": "33333222",
+    "email": "Tramp@email.com"
+  },
+  {
+    "id": 8,
+    "firstName": "Lara",
+    "secondName": "Dolores",
+    "address": "232 miltown",
+    "phoneNumber": "544444523",
+    "email": "Dolores@email.com"
+  },
+  {
+    "id": 9,
+    "firstName": "Oniel",
+    "secondName": "Dans",
+    "address": "32 New York",
+    "phoneNumber": "675346",
+    "email": "Dans@email.com"
   }
 ]

@@ -1,18 +1,25 @@
+.hero-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-body {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 80%;
 }
 .hero {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
 }
 .hero-main {
-  width: 30%;
-  border: 1px solid rgb(224, 49, 49);
+  width: 31%;
+  border: 2px solid rgb(193, 12, 209);
   margin: 5px;
+  background-color: black;
 }
 .hero-name {
   margin: 5px;
+  color: white;
 }
