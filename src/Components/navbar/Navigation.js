@@ -21,15 +21,15 @@ function Navigation({ share, themeHandler }) {
           />
         </div>
         <div className="more">
-          <a id="text-nav-assignees" href="/home">
+          <p id="text-nav-assignees" href="/home">
             Assignees
-          </a>
-          <a id="text-nav-show" href="/home">
+          </p>
+          <p id="text-nav-show" href="/home">
             Show
-          </a>
-          <a id="text-nav-more" href="/home">
+          </p>
+          <p id="text-nav-more" href="/home">
             More
-          </a>
+          </p>
         </div>
         <div className="create">
           <button type="button" id="button-nav-share" style={theme}>
