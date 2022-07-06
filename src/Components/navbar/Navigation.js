@@ -1,49 +1,50 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import ThemeContext from '../context/ThemeContext';
 
-class Navigation extends Component {
-  render() {
-    const { share, create } = this.props;
-    return (
-      <div className="nav">
-        <div className="nav-left">
-          <h2>Tasky</h2>
-          <h2 id="arrow-text">&#8592;</h2>
+function Navigation({ share, themeHandler }) {
+  const theme = useContext(ThemeContext);
+
+  return (
+    <div className="nav" style={theme}>
+      <div className="nav-left" style={theme}>
+        <h2>Tasky</h2>
+        <h2 id="arrow-text">&#8592;</h2>
+      </div>
+      <div className="nav-right">
+        <div className="seacrh">
+          <input
+            style={theme}
+            id="search-tasks-text"
+            type="text"
+            placeholder="Search tasks..."
+          />
         </div>
-        <div className="nav-right">
-          <div className="seacrh">
-            <input
-              id="search-tasks-text"
-              type="text"
-              placeholder="Search tasks..."
-            />
-          </div>
-          <div className="more">
-            <a id="text-nav-assignees" href="/home">
-              Assignees
-            </a>
-            <a id="text-nav-show" href="/home">
-              Show
-            </a>
-            <a id="text-nav-more" href="/home">
-              More
-            </a>
-          </div>
-          <div className="create">
-            <button type="button" id="button-nav-share">
-              {share}
-            </button>
-            <button type="button" id="button-nav-create">{create}</button>
-          </div>
+        <div className="more">
+          <a id="text-nav-assignees" href="/home">
+            Assignees
+          </a>
+          <a id="text-nav-show" href="/home">
+            Show
+          </a>
+          <a id="text-nav-more" href="/home">
+            More
+          </a>
+        </div>
+        <div className="create">
+          <button type="button" id="button-nav-share" style={theme}>
+            {share}
+          </button>
+          <button type="button" style={theme} id="button-nav-create" onClick={themeHandler}>Change Color Theme</button>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 Navigation.propTypes = {
   share: PropTypes.string.isRequired,
-  create: PropTypes.string.isRequired,
+  themeHandler: PropTypes.func.isRequired,
 };
 
 export default Navigation;

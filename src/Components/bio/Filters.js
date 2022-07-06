@@ -189,12 +189,14 @@ function Filters() {
               <>
                 {editContactId === contact.id ? (
                   <EditableRow
+                    key={contact.id.toString()}                  
                     editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}
                     handleCancelClick={handleCancelClick}
                   />
                 ) : (
                   <ReadOnlyRow
+                    key={contact.id.toString()}                
                     dragStartHandler={dragStartHandler}
                     dragEndHandler={dragEndHandler}
                     dragOverHandler={dragOverHandler}

@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import ThemeContext from '../context/ThemeContext';
 import TimeView from './TimeView';
 
 function Time() {
   const [currentSecond, setCurrentSecond] = useState(0);
+  const theme = useContext(ThemeContext);
 
   useEffect(() => {
     const addSecondInterval = setInterval(() => {
@@ -14,7 +16,7 @@ function Time() {
     };
   });
 
-  return <TimeView currentSecond={currentSecond} />;
+  return <TimeView currentSecond={currentSecond} theme={theme} />;
 }
 
 export default Time;

@@ -1,12 +1,17 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import NameView from './NameView';
+import ThemeContext from '../context/ThemeContext';
 
-class Name extends Component {
-  render() {
-    const { name } = this.props;
-    return <NameView name={name} />;
-  }
+function Name({ name }) {
+  const theme = useContext(ThemeContext);
+
+  return (
+    <div className="center-main-name" style={theme}>
+      <span id="text-main-crypter">{name}</span>
+      <span id="text-main-member">+ Member</span>
+      <span />
+    </div>
+  );
 }
 
 Name.propTypes = {

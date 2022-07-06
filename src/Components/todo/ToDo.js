@@ -1,20 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import ToDoView from './ToDoView';
+import ThemeContext from '../context/ThemeContext';
 
-class ToDo extends React.Component {
-  render() {
-    const { name } = this.props;
-    const { firstValue, secondValue, thirdValue } = this.props;
-    return (
-      <ToDoView
-        name={name}
-        firstValue={firstValue}
-        secondValue={secondValue}
-        thirdValue={thirdValue}
-      />
-    );
-  }
+function ToDo({
+  name, firstValue, secondValue, thirdValue 
+}) {
+  const theme = useContext(ThemeContext);
+  return (
+    <ToDoView
+      theme={theme}
+      name={name}
+      firstValue={firstValue}
+      secondValue={secondValue}
+      thirdValue={thirdValue}
+    />
+  );
 }
 
 ToDo.propTypes = {
