@@ -8,8 +8,7 @@ function Name({ name }) {
   return (
     <div className="center-main-name" style={theme}>
       <span id="text-main-crypter">{name}</span>
-      <span id="text-main-member">+ Member</span>
-      <span />
+      <button type="button" id="text-main-member" style={theme}>+ Member</button>
     </div>
   );
 }

@@ -1,19 +1,21 @@
 .center-main {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: flex-start; */
   flex-direction: column;
   width: 80%;
   background-color: rgb(20, 20, 20);
 }
-.main div {
-  width: 70%;
-  display: flex;
-}
 .center-main-path {
-  display: flex;
   width: 100%;
+  height: 3em;
+  display: flex;
   text-align: center;
+}
+#text-main-path-projects {
+  padding: 0.5em 0.5em;
+}
+#text-main-path-aro {
+  margin-left: 10px;
+  padding: 0.5em 0.5em;
 }
 .center-main-name {
   display: flex;
@@ -23,6 +25,18 @@
   height: 4em;
   border-bottom: 1px solid rgba(99, 98, 98, 0.2);
 }
+#text-main-crypter {
+  margin: 0 0 5px 15px;
+  font-size: 3em;
+}
+#text-main-member {
+  margin: 0 15px 5px 0;
+  font-size: 3em;
+}
+#text-main-member:hover{
+  border-radius: 5%;
+  background-color: rgba(32, 83, 151, 0.815) !important;
+}
 .center-main-tasks {
   display: flex;
   justify-content: space-between;
@@ -30,6 +44,38 @@
   width: 100%;
   height: 4em;
   border-bottom: 1px solid rgba(99, 98, 98, 0.2);
+}
+#text-main-path-tasks {
+  font-size: 2em;
+  padding: 0.3em 1em;
+}
+#text-main-path-tasks:hover{
+  background-color: rgba(32, 83, 151, 0.815);
+  border-radius: 3%;
+}
+#text-main-path-obj {
+  font-size: 2em;
+  padding: 0.3em 1em;
+}
+#text-main-path-obj:hover{
+  background-color: rgba(32, 83, 151, 0.815);
+  border-radius: 3%;
+}
+#text-main-path-watchlist {
+  font-size: 2em;
+  padding: 0.3em 1em;
+}
+#text-main-path-watchlist:hover{
+  background-color: rgba(32, 83, 151, 0.815);
+  border-radius: 3%;
+}
+#text-main-path-favou {
+  font-size: 2em;
+  padding: 0.3em 1em;
+}
+#text-main-path-favou:hover{
+  background-color: rgba(32, 83, 151, 0.815);
+  border-radius: 3%;
 }
 .center-main-lists {
   display: flex;

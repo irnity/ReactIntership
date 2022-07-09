@@ -8,7 +8,7 @@ function Navigation({ share, themeHandler }) {
   return (
     <div className="nav" style={theme}>
       <div className="nav-left" style={theme}>
-        <h2>Tasky</h2>
+        <h2 id="tasky-text">Tasky</h2>
         <h2 id="arrow-text">&#8592;</h2>
       </div>
       <div className="nav-right">

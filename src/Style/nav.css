@@ -1,6 +1,6 @@
 .nav {
   display: flex;
-  height: 7em;
+  height: 5em;
   background-color: rgb(29, 28, 28);
   border-bottom: 1px solid rgba(99, 98, 98, 0.5);
 
@@ -37,4 +37,66 @@
   flex-grow: 1.3;
   display: flex;
   justify-content: space-around;
+}
+#arrow-text {
+  border: 1px solid rgb(99, 98, 98);
+  text-align: center;
+  width: 1.3em;
+  padding: 0.2em 0.2em;
+  border-radius: 100%;
+}
+#tasky-text{
+  font-size: 1.9em;
+}
+#search-tasks-text {
+  border: 1px solid rgb(114, 110, 110);
+  border-radius: 0.7em;
+  width: 80%;
+  font-size: 1.9em;
+  background-color: rgb(41, 39, 39);
+}
+#text-nav-assignees {
+  padding: 0.3em 0.3em;
+  font-size: 1.9em;
+}
+#text-nav-assignees:hover{
+  background-color: rgba(32, 83, 151, 0.815);
+  border-radius: 3%;
+}
+#text-nav-show {
+  padding: 0.3em 0.3em;
+  font-size: 1.9em;
+}
+#text-nav-show:hover{
+  background-color: rgba(32, 83, 151, 0.815);
+  border-radius: 3%;
+}
+#text-nav-more {
+  padding: 0.3em 0.3em;
+  font-size: 1.9em;
+}
+#text-nav-more:hover{
+  background-color: rgba(32, 83, 151, 0.815);
+  border-radius: 3%;
+}
+#button-nav-share {
+  width: 30%;
+  font-size: 1.9em;
+  border-radius: 0.3em;
+  background-color: rgb(32, 32, 32);
+  border: 1px solid rgba(99, 98, 98, 0.5);
+}
+#button-nav-share:hover{
+  background-color: rgba(32, 83, 151, 0.815) !important;
+  border-radius: 0.3em;
+}
+#button-nav-create {
+  width: 60%;
+  height: 2em;
+  border: 1px solid rgb(112, 112, 112);
+  font-size: 1.5em;
+  border-radius: 0.3em;
+}
+#button-nav-create:hover{
+  background-color: rgba(32, 83, 151, 0.815) !important;
 }

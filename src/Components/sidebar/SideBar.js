@@ -29,14 +29,6 @@ function SideBar() {
         <span id="text-sidebar-settings">Settings</span>
         <span id="text-sidebar-support">Support</span>
       </div>
-      <div className="light-side-bar">
-        <h2>Dark</h2>
-        <h2>Lisht</h2>
-      </div>
-      <div className="name-side-bar">
-        <span id="text-sidebar-name">Name</span>
-        <span id="text-sidebar-arrow-low">&#8595;</span>
-      </div>
     </div>
   );
 }
