@@ -2,13 +2,15 @@
   display: flex;
   height: 7em;
   background-color: rgb(29, 28, 28);
+  border-bottom: 1px solid rgba(99, 98, 98, 0.5);
+
 }
 .nav-left {
   width: 20%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid rgba(99, 98, 98, 0.5);
+  border-right: 1px solid rgba(99, 98, 98, 0.5);
 }
 .nav-right {
   width: 80%;
