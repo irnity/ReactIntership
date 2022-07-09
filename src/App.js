@@ -30,7 +30,7 @@ function App() {
         <Navigation share="Share" themeHandler={toggleTheme} />
         <div className="main-app">
           <SideBar />
-          <div className="center-main">
+          <div className="center-main" style={theme}>
             <Time />
             <Name name="Crypter App" />
             <Panel />
