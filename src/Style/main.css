@@ -86,14 +86,31 @@
   width: 33%;
   border: 1px solid rgba(99, 98, 98, 0.2);
 }
+.todo-folder-top{
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  
+}
 .todo-folder {
+  width: 80%;
+  background-color: rgba(54, 54, 54, 0.541);
   display: flex;
   justify-content: space-around;
+  border-radius: 15px 15px 0 0;
+}
+.todo-blocks-top{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .todo-blocks {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
+  width: 80%;
+  background-color: rgba(54, 54, 54, 0.541);
+  border-radius: 0 0 15px 15px;
 }
 .center-main-block {
   display: flex;
@@ -103,7 +120,7 @@
   width: 80%;
   height: 8em;
   border-radius: 0.7em;
-  background-color: rgb(32, 32, 32);
+  
 }
 .center-main-block div {
   display: flex;
