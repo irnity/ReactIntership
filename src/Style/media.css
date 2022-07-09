@@ -1,0 +1,238 @@
+@media all and (max-width: 1618px) {
+  #button-nav-create{
+    font-size: 1em;
+  }
+  #button-nav-share{
+    font-size: 1em;
+  }
+}
+@media all and (max-width: 1320px){
+  #button-nav-create{
+    font-size: 0.7em;
+    height: 3em;
+
+  }
+  #button-nav-share{
+    font-size: 0.7em;
+    height: 3em;
+}
+  #text-nav-assignees {
+    font-size: 1em;
+  }
+  #text-nav-show {
+    font-size: 1em;
+  }
+  #text-nav-more {
+    font-size: 1em;
+  }
+
+}
+@media all and (max-width: 1250px){
+  #text-main-path-tasks {
+    font-size: 1.3em;
+  }
+  #text-main-path-obj {
+    font-size: 1.3em;
+  }
+  #text-main-path-watchlist {
+    font-size: 1.3em;
+  }
+  #text-main-path-favou {
+    font-size: 1.3em;
+  }
+  #text-main-path-viewb {
+    font-size: 1.3em;
+  }
+  #text-main-path-code {
+    font-size: 1.3em;
+  }
+  #text-main-column{
+    display: flex;
+    align-items: center;
+    max-width: 30%;
+    flex-wrap: wrap;
+    font-size:1em;
+  }
+}
+@media all and (max-width: 1000px){
+  #text-main-path-tasks {
+    font-size: 1em;
+  }
+  #text-main-path-obj {
+    font-size: 1em;
+  }
+  #text-main-path-watchlist {
+    font-size: 1em;
+  }
+  #text-main-path-favou {
+    font-size: 1em;
+  }
+  #text-main-path-viewb {
+    font-size: 1em;
+  }
+  #text-main-path-code {
+    font-size: 1em;
+  }
+  #text-sidebar-folder{
+    font-size: 1.3em;
+  }
+  #text-sidebar-arrow{
+    font-size: 1.3em;
+  }
+  #text-sidebar-search {
+    font-size: 1em;
+  }
+  #text-sidebar-menu {
+      font-size: 1em;
+  }
+  #text-sidebar-dashboard {
+      font-size: 1em;
+  }
+  #text-sidebar-projects {
+      font-size: 1em;
+  }
+  #text-sidebar-tasks {
+      font-size: 1em;
+  }
+  #text-sidebar-calendar {
+      font-size: 1em;
+  }
+  #text-sidebar-general {
+      font-size: 1em;
+  }
+  #text-sidebar-settings {
+      font-size: 1em;
+  }
+  #text-sidebar-support {
+      font-size: 1em;
+  }
+}
+@media all and (max-width: 872px){
+  .todo{
+    width:100%
+  }
+}
+@media all and (max-width: 689px) {
+  #tasky-text{
+    font-size: 1em;
+  }
+  #arrow-text{
+    font-size: 1em;
+  }
+  .seacrh{
+    font-size: 0.6em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+  }
+  #text-sidebar-folder{
+    font-size: 0.6em;
+  }
+  #text-sidebar-arrow{
+    font-size: 0.6em;
+  }
+  #button-nav-create{
+    font-size: 0.6em;
+    height: 5em;
+  }
+  #button-nav-share{
+    font-size: 0.6em;
+    height: 5em;
+  }
+  #text-main-path-tasks {
+    font-size: 0.6em;
+  }
+  #text-main-path-obj {
+    font-size: 0.6em;
+  }
+  #text-main-path-watchlist {
+    font-size: 0.6em;
+  }
+  #text-main-path-favou {
+    font-size: 0.6em;
+  }
+  #text-main-path-viewb {
+    font-size: 0.6em;
+  }
+  #text-main-path-code {
+    font-size: 0.6em;
+  }
+  #text-main-crypter{
+    font-size: 2em;
+  }
+  #text-main-member{
+    font-size: 2em;
+
+  }
+}
+@media all and (max-width: 537px) {
+  .nav{
+    height: 10em;
+  }
+  .more {
+    width: 5em;
+    flex-grow: 1.5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+  #tasky-text{
+    font-size: 0.6em;
+  }
+  #arrow-text{
+    font-size: 0.5em;
+  }
+  #button-nav-create{
+    font-size: 0.4em;
+  }
+  #button-nav-share{
+    font-size: 0.4em;
+  }
+  #text-nav-assignees {
+    font-size: 0.7em;
+  }
+  #text-nav-show {
+    font-size: 0.7em;
+  }
+  #text-nav-more {
+    font-size: 0.7em;
+  }
+  #text-main-crypter{
+    font-size: 1em;
+  }
+  #text-main-member{
+    font-size: 1em;
+
+  }
+}
+@media all and (max-width: 382px) {
+  #text-main-path-aro{
+    font-size: 0.7em;
+  }
+  #text-main-path-projects{
+    font-size: 0.7em;
+  }
+  .center-main-path{
+    height: 2em;
+  }
+  #text-main-path-tasks {
+    font-size: 0.5em;
+  }
+  #text-main-path-obj {
+    font-size: 0.5em;
+  }
+  #text-main-path-watchlist {
+    font-size: 0.5em;
+  }
+  #text-main-path-favou {
+    font-size: 0.5em;
+  }
+  #text-main-path-viewb {
+    font-size: 0.5em;
+  }
+  #text-main-path-code {
+    font-size: 0.5em;
+  }
+}

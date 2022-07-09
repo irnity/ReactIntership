@@ -77,6 +77,14 @@
   background-color: rgba(32, 83, 151, 0.815);
   border-radius: 3%;
 }
+#text-main-path-viewb {
+  font-size: 2em;
+  padding: 0;
+}
+#text-main-path-code {
+  font-size: 2em;
+  padding: 1em 1em;
+}
 .center-main-lists {
   display: flex;
   flex-wrap: wrap;

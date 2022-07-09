@@ -1,8 +1,9 @@
 import './Style/nav.css';
 import './Style/style.css';
-import './Style/main.css';
 import './Style/sidebar.css';
 import './Style/fonts.css';
+import './Style/main.css';
+import './Style/media.css';
 
 import { useState } from 'react';
 
@@ -42,7 +43,7 @@ function App() {
                 thirdValue="65"
               />
               <ToDo
-                name="OnProgress"
+                name="On Progress"
                 firstValue="6"
                 secondValue="22"
                 thirdValue="14"
