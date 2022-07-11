@@ -20,7 +20,11 @@ function Time() {
   return (
     <div className="center-main-path" style={theme}>
       <p id="text-main-path-aro">{t('time')}</p>
-      <p id="text-main-path-projects">{currentSecond}</p>
+      <p id="text-main-path-projects">
+        {currentSecond}
+        {' '}
+        seconds
+      </p>
     </div>
   );
 }

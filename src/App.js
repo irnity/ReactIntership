@@ -7,7 +7,6 @@ import './Style/media.css';
 
 import { useState, Suspense } from 'react';
 
-import { useTranslation } from 'react-i18next';
 import ToDo from './Components/todo/ToDo';
 import Navigation from './Components/navbar/Navigation';
 import SideBar from './Components/sidebar/SideBar';
@@ -19,7 +18,6 @@ import Hero from './Components/hero/Hero';
 import ThemeContext, { themes } from './context/ThemeContext';
 
 function App() {
-  const { t } = useTranslation();
   const [theme, setTheme] = useState(themes.dark);
 
   const toggleTheme = () => {
@@ -40,30 +38,7 @@ function App() {
               <Name />
               <Panel />
               <div className="center-main-lists" style={theme}>
-                <ToDo
-                  name={t('start')}
-                  firstValue="4"
-                  secondValue="2"
-                  thirdValue="65"
-                />
-                <ToDo
-                  name={t('onprogress')}
-                  firstValue="6"
-                  secondValue="22"
-                  thirdValue="14"
-                />
-                <ToDo
-                  name={t('rate')}
-                  firstValue="7"
-                  secondValue="3"
-                  thirdValue="12"
-                />
-                <ToDo
-                  name={t('finished')}
-                  firstValue="1"
-                  secondValue="11"
-                  thirdValue="9"
-                />
+                <ToDo />
               </div>
             </div>
           </div>

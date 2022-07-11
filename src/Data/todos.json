@@ -1,0 +1,26 @@
+[
+{
+  "name": "Start",
+  "firstValue": 1,
+  "secondValue": 2,
+  "thirdValue": 3
+},
+{
+  "name": "Progress",
+  "firstValue": 1,
+  "secondValue": 2,
+  "thirdValue": 3
+},
+{
+  "name": "Rate",
+  "firstValue": 1,
+  "secondValue": 2,
+  "thirdValue": 3
+},
+{
+  "name": "Finished",
+  "firstValue": 1,
+  "secondValue": 2,
+  "thirdValue": 3
+  }
+]
