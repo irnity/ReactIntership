@@ -1,5 +1,4 @@
-import React, { Fragment, useState } from 'react';
-// import { nanoid } from 'nanoid';
+import React, { useState } from 'react';
 import '../../Style/filters.css';
 import data from '../../Data/data.json';
 import EditableRow from './EditableRow';
@@ -171,7 +170,7 @@ function Filters() {
   };
 
   return (
-    <div className="app-container">
+    <div className="app-container"> 
       <form onSubmit={handleEditFormSubmit}>
         <table>
           <thead>
@@ -186,6 +185,7 @@ function Filters() {
           </thead>
           <tbody>
             {contacts.sort(sortContacts).map((contact) => (
+              // eslint-disable-next-line react/jsx-no-useless-fragment
               <>
                 {editContactId === contact.id ? (
                   <EditableRow
@@ -206,7 +206,6 @@ function Filters() {
                     handleDeleteClick={handleDeleteClick}
                   />
                 )}
-                <div />
               </>
             ))}
           </tbody>

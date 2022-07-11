@@ -43,7 +43,8 @@ function ReadOnlyRow({
 }
 
 ReadOnlyRow.propTypes = {
-  contact: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  contact: PropTypes.object.isRequired,
   handleEditClick: PropTypes.func.isRequired,
   handleDeleteClick: PropTypes.func.isRequired,
   dragStartHandler: PropTypes.func.isRequired,

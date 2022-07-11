@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import ThemeContext from '../context/ThemeContext';
+import { useTranslation } from 'react-i18next';
+import ThemeContext from '../../context/ThemeContext';
 
 function ToDo({
   name, firstValue, secondValue, thirdValue 
 }) {
   const theme = useContext(ThemeContext);
+  const { t } = useTranslation();
 
   return (
     <div className="todo" style={theme}>
@@ -23,14 +25,14 @@ function ToDo({
         <div className="todo-blocks">
           <div className="center-main-block">
             <div className="todo-research">
-              <span id="text-main-block-research">Research</span>
+              <span id="text-main-block-research">{t('research')}</span>
               <span id="text-main-block-dots">...</span>
             </div>
             <div>
-              <span id="text-main-block-user">User Interview</span>
+              <span id="text-main-block-user">{t('userInterview')}</span>
             </div>
             <div>
-              <span id="text-main-block-low">Low</span>
+              <span id="text-main-block-low">{t('low')}</span>
             </div>
             <div className="main-blocks-lower-num">
               <span id="text-main-block-number">{firstValue}</span>

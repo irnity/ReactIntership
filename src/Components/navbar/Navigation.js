@@ -1,14 +1,20 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import ThemeContext from '../context/ThemeContext';
+import { useTranslation } from 'react-i18next';
+import ThemeContext from '../../context/ThemeContext';
 
-function Navigation({ share, themeHandler }) {
+function Navigation({ themeHandler }) {
   const theme = useContext(ThemeContext);
+  const { t, i18n } = useTranslation();
+
+  const languageHandler = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
 
   return (
     <div className="nav" style={theme}>
       <div className="nav-left" style={theme}>
-        <h2 id="tasky-text">Tasky</h2>
+        <h2 id="tasky-text">{t('tasky')}</h2>
         <h2 id="arrow-text">&#8592;</h2>
       </div>
       <div className="nav-right">
@@ -17,25 +23,28 @@ function Navigation({ share, themeHandler }) {
             style={theme}
             id="search-tasks-text"
             type="text"
-            placeholder="Search tasks..."
+            placeholder={t('search')}
           />
         </div>
         <div className="more">
           <p id="text-nav-assignees" href="/home">
-            Assignees
+            {t('info')}
           </p>
           <p id="text-nav-show" href="/home">
-            Show
+            {t('contacts')}
           </p>
           <p id="text-nav-more" href="/home">
-            More
+            {t('more')}
           </p>
         </div>
         <div className="create">
-          <button type="button" id="button-nav-share" style={theme}>
-            {share}
+          <select id="button-nav-share" onClick={languageHandler} style={theme} defaultValue={i18n.resolvedLanguage}>
+            <option value="en" disabled={i18n.resolvedLanguage === 'en'}>{t('english')}</option>
+            <option value="ua" disabled={i18n.resolvedLanguage === 'ua'}>{t('ukraine')}</option>
+          </select>
+          <button type="button" style={theme} id="button-nav-create" onClick={themeHandler}>
+            {t('changeColorTheme')}
           </button>
-          <button type="button" style={theme} id="button-nav-create" onClick={themeHandler}>Change Color Theme</button>
         </div>
       </div>
     </div>
@@ -43,7 +52,6 @@ function Navigation({ share, themeHandler }) {
 }
 
 Navigation.propTypes = {
-  share: PropTypes.string.isRequired,
   themeHandler: PropTypes.func.isRequired,
 };
 
