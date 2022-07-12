@@ -1,10 +1,27 @@
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
-function ToDoView({ theme, data, handleDeleteClick }) {
+function ToDoView({
+  theme,
+  data,
+  handleDeleteClick,
+  dragStartHandler,
+  dragEndHandler,
+  dragOverHandler,
+  dropHandler, 
+}) {
   const { t } = useTranslation();
   return (
-    <div className="todo" style={theme}>
+    <div
+      className="todo" 
+      style={theme}
+      onDragStart={(e) => dragStartHandler(e, data)}
+      onDragLeave={(e) => dragEndHandler(e)}
+      onDragEnd={(e) => dragEndHandler(e)}
+      onDragOver={(e) => dragOverHandler(e)}
+      onDrop={(e) => dropHandler(e, data)}
+      draggable
+    >
       <div className="todo-folder-top">      
         <div className="todo-folder">
           <h2 id="text-main-column" className="inwork">
@@ -53,7 +70,11 @@ ToDoView.propTypes = {
   theme: PropTypes.object.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   data: PropTypes.object.isRequired,
-  handleDeleteClick: PropTypes.func.isRequired
+  handleDeleteClick: PropTypes.func.isRequired,
+  dragStartHandler: PropTypes.func.isRequired,
+  dragEndHandler: PropTypes.func.isRequired,
+  dragOverHandler: PropTypes.func.isRequired,
+  dropHandler: PropTypes.func.isRequired
 };
 
 export default ToDoView;

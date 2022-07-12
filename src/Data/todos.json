@@ -5,29 +5,29 @@
 {
   "id":  1,
   "name": "Start",
-  "firstValue": "1",
-  "secondValue": "2",
-  "thirdValue": "3"
+  "firstValue": "11",
+  "secondValue": "22",
+  "thirdValue": "33"
 },
 {
   "id":  2,
   "name": "Progress",
-  "firstValue": "1",
-  "secondValue": "2",
-  "thirdValue": "3"
+  "firstValue": "43",
+  "secondValue": "23",
+  "thirdValue": "64"
 },
 {
   "id":  3,
   "name": "Rate",
-  "firstValue": "1",
-  "secondValue": "2",
-  "thirdValue": "3"
+  "firstValue": "54",
+  "secondValue": "12",
+  "thirdValue": "75"
 },
 {
   "id":  4,
   "name": "Finished",
-  "firstValue": "1",
-  "secondValue": "2",
-  "thirdValue": "3"
+  "firstValue": "95",
+  "secondValue": "33",
+  "thirdValue": "66"
   }
 ]

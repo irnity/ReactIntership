@@ -8,6 +8,7 @@ function ToDo() {
   const theme = useContext(ThemeContext);
   const [todo, setTodo] = useState(data);
   const [newTodoForm, setNewTodoForm] = useState(false);
+  const [currentTodo, setCurrentTodo] = useState(null);
 
   const createTodoHandler = (value) => {
     const newTodo = {
@@ -37,6 +38,35 @@ function ToDo() {
 
     setTodo(newTodos);
   };
+
+  const dragStartHandler = (e, curTodo) => {
+    setCurrentTodo(curTodo);
+  };
+  const dragEndHandler = () => {
+  };
+  const dragOverHandler = (e) => {
+    e.preventDefault();
+  };
+  const dropHandler = (e, todos) => {
+    e.preventDefault();
+    setTodo(
+      todo.map((datas) => {
+        if (datas.id === todos.id) {
+          return { ...datas, id: currentTodo.id };
+        }
+        if (datas.id === currentTodo.id) {
+          return { ...datas, id: todos.id };
+        }
+        return datas;
+      })
+    );
+  };
+
+  const sortTodos = (a, b) => {
+    if (a.id > b.id) {
+      return 1;
+    } return -1;
+  };
   return (  
     <div className="Todo-top">      
       {newTodoForm && <TodoCreacte cancelTodoForm={cancelTodoForm} createTodoHandler={createTodoHandler} />}
@@ -51,13 +81,17 @@ function ToDo() {
         </button>
       </div>
       <div className="Todo-top-bottom">      
-        {todo.slice(1).map((todos) => (
+        {todo.sort(sortTodos).slice(1).map((todos) => (
           <ToDoView 
             key={todos.id} 
             theme={theme} 
             data={todos} 
             setTodo={setTodo} 
             handleDeleteClick={handleDeleteClick}
+            dragStartHandler={dragStartHandler}
+            dragEndHandler={dragEndHandler}
+            dragOverHandler={dragOverHandler}
+            dropHandler={dropHandler}
           />
         ))}
       </div>
