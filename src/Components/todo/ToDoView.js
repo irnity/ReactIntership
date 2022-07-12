@@ -1,17 +1,24 @@
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
-function ToDoView({ theme, data }) {
+function ToDoView({ theme, data, handleDeleteClick }) {
   const { t } = useTranslation();
   return (
     <div className="todo" style={theme}>
       <div className="todo-folder-top">      
         <div className="todo-folder">
           <h2 id="text-main-column" className="inwork">
-            {data.name}
+            {data.name} 
           </h2>
           <h2 id="text-main-plus">+</h2>
-          <h2 id="text-main-dots-one">...</h2>
+          <button
+            type="button" 
+            id="text-main-dots-one" 
+            onClick={() => handleDeleteClick(data.id)}
+            style={theme}
+          >
+            Delete
+          </button>
         </div>
 
       </div>
@@ -42,9 +49,11 @@ function ToDoView({ theme, data }) {
 }
 
 ToDoView.propTypes = {
-  theme: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
-  data: PropTypes.object.isRequired
+  theme: PropTypes.object.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  data: PropTypes.object.isRequired,
+  handleDeleteClick: PropTypes.func.isRequired
 };
 
 export default ToDoView;

@@ -90,6 +90,18 @@
   flex-wrap: wrap;
   width: 100%;
 }
+.Todo-top{
+  width:100%;
+}
+.Todo-top-top{
+  display: flex;
+  justify-content: flex-end;
+}
+.Todo-top-bottom{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
 .todo {
   width: 33%;
   border: 1px solid rgba(99, 98, 98, 0.2);
@@ -112,6 +124,7 @@
   display: flex;
   justify-content: center;
 }
+
 .todo-blocks {
   display: flex;
   justify-content: center;
@@ -138,4 +151,76 @@
 .main-blocks-lower-num {
   display: flex;
   width: 30% !important;
+}
+#text-main-column{
+  width: 30%;
+  text-align: center;
+  justify-content: center;
+}
+
+#text-main-dots-one{
+  height: 2em;
+  margin-top: 25px;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  background-color: rgba(54, 54, 54, 0) !important; 
+}
+#text-main-dots-one:hover{
+  background-color: rgba(32, 83, 151, 0.815) !important;
+  border-radius: 5%;
+  padding: 2px;
+}
+#text-main-todo-create{
+  margin: 0;
+  font-size: 2em;
+}
+#text-main-todo-create:hover{
+  background-color: rgba(32, 83, 151, 0.815) !important;
+  border-radius: 5%;
+}
+.backdrop {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  width: 70%;
+  height: 40%;
+  border-radius: 15px;
+  background-color: rgba(54, 54, 54, 1); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-creacte-todo{
+  width: 30em;
+  height: 25px;
+  margin: 5px;
+  background-color: rgb(255, 255, 255);
+}
+.button-create-todo{
+  width: 10em;
+  margin: 5px;
+  background-color: rgb(255, 255, 255);
+}
+.button-create-todo:hover{
+  background-color: rgba(32, 83, 151, 0.815) !important;
+  border-radius: 5%;
+}
+.todoCreacte{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

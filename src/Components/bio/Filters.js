@@ -184,12 +184,12 @@ function Filters() {
             </tr>
           </thead>
           <tbody>
-            {contacts.sort(sortContacts).map((contact) => (
+            {contacts.sort(sortContacts).slice(1).map((contact) => (
               // eslint-disable-next-line react/jsx-no-useless-fragment
               <>
                 {editContactId === contact.id ? (
                   <EditableRow
-                    key={contact.id.toString()}                  
+                    key={contact.id}                  
                     editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}
                     handleCancelClick={handleCancelClick}
