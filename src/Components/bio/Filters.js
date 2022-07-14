@@ -137,17 +137,14 @@ function Filters() {
   };
 
   const dragStartHandler = (e, contact) => {
-    // console.log("drag", contact)
     setCurrentContact(contact);
   };
   
-  const dragEndHandler = (e) => {
-    e.target.style.background = ' rgb(20, 20, 20)';
+  const dragEndHandler = () => {
   };
   
   const dragOverHandler = (e) => {
     e.preventDefault();
-    e.target.style.background = 'lightgray';
   };
 
   const dropHandler = (e, contact) => {
@@ -163,7 +160,6 @@ function Filters() {
         return datas;
       })
     );
-    e.target.style.background = 'rgb(20, 20, 20)';
   };
 
   const sortContacts = (a, b) => {
