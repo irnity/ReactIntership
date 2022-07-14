@@ -27,15 +27,15 @@ function Navigation({ themeHandler }) {
           />
         </div>
         <div className="more">
-          <p id="text-nav-assignees" href="/home">
+          <a id="text-nav-assignees" href="/home" style={theme}>
             {t('info')}
-          </p>
-          <p id="text-nav-show" href="/home">
+          </a>
+          <a id="text-nav-show" href="/home" style={theme}>
             {t('contacts')}
-          </p>
-          <p id="text-nav-more" href="/home">
+          </a>
+          <a id="text-nav-more" href="/home" style={theme}>
             {t('more')}
-          </p>
+          </a>
         </div>
         <div className="create">
           <select id="button-nav-share" onClick={languageHandler} style={theme} defaultValue={i18n.resolvedLanguage}>
