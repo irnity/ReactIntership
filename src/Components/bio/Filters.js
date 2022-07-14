@@ -93,16 +93,9 @@ function Filters() {
 
   const handleEditClick = (event, contact) => {
     event.preventDefault();
-    setEditContactId(contact.id);
+    const { id, ...formValues } = contact;
 
-    const formValues = {
-      firstName: contact.firstName,
-      secondName: contact.secondName,
-      address: contact.address,
-      phoneNumber: contact.phoneNumber,
-      email: contact.email,
-    };
-
+    setEditContactId(id);
     setEditFormData(formValues);
   };
 
