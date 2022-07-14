@@ -28,6 +28,7 @@ function ToDo() {
   const newTodoFormHandler = () => {
     setNewTodoForm(true);
   };
+  
   const cancelTodoForm = () => {
     setNewTodoForm(false);
   };
@@ -45,11 +46,14 @@ function ToDo() {
   const dragStartHandler = (e, curTodo) => {
     setCurrentTodo(curTodo);
   };
+
   const dragEndHandler = () => {
   };
+
   const dragOverHandler = (e) => {
     e.preventDefault();
   };
+
   const dropHandler = (e, todos) => {
     e.preventDefault();
     setTodo(
@@ -66,10 +70,9 @@ function ToDo() {
   };
 
   const sortTodos = (a, b) => {
-    if (a.id > b.id) {
-      return 1;
-    } return -1;
+    return a.id > b.id ? 1 : -1;
   };
+
   return (  
     <div className="Todo-top">      
       {newTodoForm && <TodoCreacte cancelTodoForm={cancelTodoForm} createTodoHandler={createTodoHandler} />}
