@@ -81,11 +81,7 @@ function Filters() {
       email: editFormData.email,
     };
 
-    const newContacts = [...contacts];
-
-    const index = contacts.findIndex((contact) => contact.id === editContactId);
-
-    newContacts[index] = editedContact;
+    const newContacts = contacts.map((contact) => (contact.id === editContactId ? editedContact : contact));
 
     setContacts(newContacts);
     setEditContactId(null);
