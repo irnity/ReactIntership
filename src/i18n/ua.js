@@ -13,6 +13,7 @@ export default
   english: 'Англійська',
   ukraine: 'Українська',
   changeColorTheme: 'Змінити колір теми',
+  swap: 'Змін',
 
   folder: 'Папка',
   menu: 'Меню',

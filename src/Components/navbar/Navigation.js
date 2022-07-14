@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import ThemeContext from '../../context/ThemeContext';
+import UpdatedComponent from '../hoc/withCouner';
 
-function Navigation({ themeHandler }) {
+function Navigation({ themeHandler, count, increment }) {
   const theme = useContext(ThemeContext);
   const { t, i18n } = useTranslation();
 
@@ -42,9 +43,14 @@ function Navigation({ themeHandler }) {
             <option value="en" disabled={i18n.resolvedLanguage === 'en'}>{t('english')}</option>
             <option value="ua" disabled={i18n.resolvedLanguage === 'ua'}>{t('ukraine')}</option>
           </select>
-          <button type="button" style={theme} id="button-nav-create" onClick={themeHandler}>
+          <button type="button" style={theme} id="button-nav-create" onClick={() => { themeHandler(); increment(); }}>
             {t('changeColorTheme')}
           </button>
+          <p id="count-top">
+            {t('swap')}
+            : 
+            {count}
+          </p>
         </div>
       </div>
     </div>
@@ -53,6 +59,8 @@ function Navigation({ themeHandler }) {
 
 Navigation.propTypes = {
   themeHandler: PropTypes.func.isRequired,
+  count: PropTypes.number.isRequired,
+  increment: PropTypes.func.isRequired,
 };
 
-export default Navigation;
+export default UpdatedComponent(Navigation);

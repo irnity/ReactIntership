@@ -69,7 +69,14 @@ function EditableRow({
 }
 
 EditableRow.propTypes = {
-  editFormData: PropTypes.string.isRequired,
+  editFormData: PropTypes.shape({
+    id: PropTypes.number,
+    firstName: PropTypes.string,
+    secondName: PropTypes.string,
+    address: PropTypes.string,
+    phoneNumber: PropTypes.string,
+    email: PropTypes.string,
+  }).isRequired,
   handleEditFormChange: PropTypes.func.isRequired,
   handleCancelClick: PropTypes.func.isRequired,
 };

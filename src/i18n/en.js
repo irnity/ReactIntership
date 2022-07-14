@@ -13,6 +13,7 @@ export default
   english: 'English',
   ukraine: 'Ukrainian',
   changeColorTheme: 'Change Color Theme',
+  swap: 'Swap',
 
   folder: 'Folder',
   menu: 'Menu',
