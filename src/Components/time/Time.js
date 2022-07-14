@@ -23,7 +23,7 @@ function Time() {
       <p id="text-main-path-projects">
         {currentSecond}
         {' '}
-        seconds
+        {t('seconds')}
       </p>
     </div>
   );

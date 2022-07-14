@@ -38,4 +38,16 @@ export default
   watchList: 'Списпок перегляду',
   favourite: 'Обране',
   viewby: 'Переглянути',
+
+  seconds: 'секунд',
+
+  todo: '+Завдання',
+  nameOfDodo: 'Назва завдання',
+  firstValue: 'Перше значення',
+  secondValue: 'Друге значення',
+  thirdValue: 'Третє значення',
+  addTodo: 'Додати завдання',
+  cancel: 'Скасування',
+  delete: 'Видалити',
+
 };

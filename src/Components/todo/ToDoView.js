@@ -34,7 +34,7 @@ function ToDoView({
             onClick={() => handleDeleteClick(data.id)}
             style={theme}
           >
-            Delete
+            {t('delete')}
           </button>
         </div>
 

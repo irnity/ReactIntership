@@ -38,4 +38,15 @@ export default
   watchList: 'Watch List',
   favourite: 'Favourite',
   viewby: 'View by',
+
+  seconds: 'seconds',
+
+  todo: '+Todo',
+  nameOfDodo: 'Name of todo',
+  firstValue: 'First Value',
+  secondValue: 'Second Value',
+  thirdValue: 'Third Value',
+  addTodo: 'Add Todo',
+  cancel: 'Cancel',
+  delete: 'Delete',
 };

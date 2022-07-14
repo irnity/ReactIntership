@@ -1,11 +1,14 @@
 import React, { useContext, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import ThemeContext from '../../context/ThemeContext';
 import ToDoView from './ToDoView';
 import data from '../../Data/todos.json';
 import TodoCreacte from './TodoCreacte';
 
 function ToDo() {
+  const { t } = useTranslation();
   const theme = useContext(ThemeContext);
+
   const [todo, setTodo] = useState(data);
   const [newTodoForm, setNewTodoForm] = useState(false);
   const [currentTodo, setCurrentTodo] = useState(null);
@@ -77,7 +80,7 @@ function ToDo() {
           id="text-main-todo-create" 
           onClick={newTodoFormHandler}
         >
-          +Todo
+          {t('todo')}
         </button>
       </div>
       <div className="Todo-top-bottom">      

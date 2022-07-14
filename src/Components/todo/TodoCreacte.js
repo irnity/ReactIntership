@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function TodoCreacte({ cancelTodoForm, createTodoHandler }) {
+  const { t } = useTranslation();
+
   const [addFormData, setAddFormData] = useState({
     name: '',
     firstValue: '',
@@ -48,7 +51,7 @@ function TodoCreacte({ cancelTodoForm, createTodoHandler }) {
             name="name" 
             required="required"
             className="input-creacte-todo" 
-            placeholder="Name of todo" 
+            placeholder={t('nameOfDodo')}
             value={addFormData.name} 
             onChange={handleAddFormChange} 
           />
@@ -57,7 +60,7 @@ function TodoCreacte({ cancelTodoForm, createTodoHandler }) {
             name="firstValue" 
             required="required"
             className="input-creacte-todo"  
-            placeholder="First Value" 
+            placeholder={t('firstValue')}
             value={addFormData.firstValue}
             onChange={handleAddFormChange} 
           />
@@ -66,7 +69,7 @@ function TodoCreacte({ cancelTodoForm, createTodoHandler }) {
             name="secondValue" 
             required="required"
             className="input-creacte-todo"  
-            placeholder="Second Value" 
+            placeholder={t('secondValue')}
             value={addFormData.secondValue}
             onChange={handleAddFormChange} 
           />
@@ -75,13 +78,25 @@ function TodoCreacte({ cancelTodoForm, createTodoHandler }) {
             name="thirdValue" 
             required="required"
             className="input-creacte-todo"  
-            placeholder="Third Value" 
+            placeholder={t('thirdValue')}
             value={addFormData.thirdValue} 
             onChange={handleAddFormChange} 
           />
           <div>          
-            <button type="submit" className="button-create-todo">Add Todo</button>
-            <button type="button" className="button-create-todo" onClick={cancelTodoForm}>Cancel</button>
+            <button 
+              type="submit" 
+              className="button-create-todo"
+            >
+              {t('addTodo')}
+            </button>
+            <button 
+              type="button" 
+              className="button-create-todo" 
+              onClick={cancelTodoForm}
+            >
+              {t('cancel')}
+              
+            </button>
           </div>
         </div>
       </div>
