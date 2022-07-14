@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import '../../Style/hero.css';
 
 function Hero() {
@@ -31,22 +31,25 @@ function Hero() {
         <div className="hero">
           {error}
           {people.map((person) => (
-            <div key={people.name} className="hero-main">
-              <div className="hero-name">
-                Name:
-                {person.name}
+            <Fragment key={person.name}>
+              <div className="hero-main">
+                <div className="hero-name">
+                  Name:
+                  {person.name}
+                </div>
+                <div className="hero-name">
+                  Height:
+                  {person.height}
+                </div>
+                <div className="hero-name">
+                  Mass:
+                  {person.mass}
+                </div>
               </div>
-              <div className="hero-name">
-                Height:
-                {person.height}
-              </div>
-              <div className="hero-name">
-                Mass:
-                {person.mass}
-              </div>
-            </div>
+            </Fragment>
           ))}
         </div>
+        
       </div>
     </div>
   );

@@ -66,10 +66,14 @@ function ToDoView({
 }
 
 ToDoView.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  theme: PropTypes.object.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  data: PropTypes.object.isRequired,
+  theme: PropTypes.shape({}).isRequired,
+  data: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    firstValue: PropTypes.string,
+    secondValue: PropTypes.string,
+    thirdValue: PropTypes.string,
+  }).isRequired,
   handleDeleteClick: PropTypes.func.isRequired,
   dragStartHandler: PropTypes.func.isRequired,
   dragEndHandler: PropTypes.func.isRequired,
