@@ -185,28 +185,25 @@ function Filters() {
           </thead>
           <tbody>
             {contacts.sort(sortContacts).slice(1).map((contact) => (
-              // eslint-disable-next-line react/jsx-no-useless-fragment
-              <>
-                {editContactId === contact.id ? (
-                  <EditableRow
-                    key={contact.id}                  
-                    editFormData={editFormData}
-                    handleEditFormChange={handleEditFormChange}
-                    handleCancelClick={handleCancelClick}
-                  />
-                ) : (
-                  <ReadOnlyRow
-                    key={contact.id.toString()}                
-                    dragStartHandler={dragStartHandler}
-                    dragEndHandler={dragEndHandler}
-                    dragOverHandler={dragOverHandler}
-                    dropHandler={dropHandler}
-                    contact={contact}
-                    handleEditClick={handleEditClick}
-                    handleDeleteClick={handleDeleteClick}
-                  />
-                )}
-              </>
+              editContactId === contact.id ? (
+                <EditableRow
+                  key={contact.id}                  
+                  editFormData={editFormData}
+                  handleEditFormChange={handleEditFormChange}
+                  handleCancelClick={handleCancelClick}
+                />
+              ) : (
+                <ReadOnlyRow
+                  key={contact.id.toString()}                
+                  dragStartHandler={dragStartHandler}
+                  dragEndHandler={dragEndHandler}
+                  dragOverHandler={dragOverHandler}
+                  dropHandler={dropHandler}
+                  contact={contact}
+                  handleEditClick={handleEditClick}
+                  handleDeleteClick={handleDeleteClick}
+                />
+              )
             ))}
           </tbody>
         </table>
